@@ -1,3 +1,2 @@
-﻿# NodeAuth
-
+﻿# Node Authentication
 
