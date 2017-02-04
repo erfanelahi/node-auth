@@ -9,7 +9,7 @@
   onlogin="checkLoginState();">
 </fb:login-button>
 <script>
-  window.fbAsyncInit = function() {
+window.fbAsyncInit = function() {
     FB.init({
       appId      : '168849686939042',
       cookie     : true,
@@ -17,18 +17,18 @@
       version    : 'v2.8'
     });
     FB.AppEvents.logPageView();   
-  };
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-   function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    console.log(response);
-    statusChangeCallback(response);
-  });
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            console.log(response);
+            statusChangeCallback(response);
+        });
+    };
 }
 </script>
