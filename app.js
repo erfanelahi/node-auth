@@ -64,6 +64,7 @@ app.use(function (err, req, res, next) {
     });
 });
 
-var port = 1337;
-app.listen(port);
-console.log("NodeBasicAuth listening on port " + port);
+var port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
+});

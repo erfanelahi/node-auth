@@ -5,9 +5,9 @@ var OAuth2Strategy = require("passport-oauth2").Strategy;
 var User = require("../models/user");
 
 var facebookConfig = {
-	clientID : "",
-	clientSecret : "",
-	callbackURL : "http://localhost:3000/facebook/callback",
+	clientID : "168849686939042",
+	clientSecret : "3e4ced1212254e371f07e2f98caf594f",
+	callbackURL : "http://erfanapp.herokuapp.com/facebook/callback",
 	passReqToCallback : true
 };
 
