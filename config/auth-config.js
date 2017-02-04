@@ -16,7 +16,7 @@ var demoAppConfig = {
 	tokenURL: "http://brentertainment.com/oauth2/lockdin/token",
 	clientID: "demoapp",
 	clientSecret: "demopass",
-	callbackURL : "http://localhost:3000/demo/callback"
+	callbackURL : "http://erfanapp.herokuapp.com/demo/callback"
 };
 
 
