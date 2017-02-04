@@ -4,6 +4,10 @@
     <a href="/register" class="btn btn-default">Register</a>
     <a href="/facebook" class="btn btn-default btn-primary">Facebook</a>
 </div>
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -22,4 +26,9 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+   function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
 </script>
