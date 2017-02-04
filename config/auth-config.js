@@ -4,10 +4,13 @@ var FacebookStrategy = require("passport-facebook").Strategy;
 var OAuth2Strategy = require("passport-oauth2").Strategy;
 var User = require("../models/user");
 
+const webOrLocalURL = "http://erfanapp.herokuapp.com";
+//const webOrLocalURL = "http://localhost:3000";
+
 var facebookConfig = {
 	clientID : "168849686939042",
 	clientSecret : "3e4ced1212254e371f07e2f98caf594f",
-	callbackURL : "http://erfanapp.herokuapp.com/facebook/callback",
+	callbackURL : webOrLocalURL+"/facebook/callback",
 	passReqToCallback : true
 };
 
@@ -16,7 +19,7 @@ var demoAppConfig = {
 	tokenURL: "http://brentertainment.com/oauth2/lockdin/token",
 	clientID: "demoapp",
 	clientSecret: "demopass",
-	callbackURL : "http://erfanapp.herokuapp.com/demo/callback"
+	callbackURL : webOrLocalURL+"/demo/callback"
 };
 
 
@@ -81,7 +84,7 @@ var facebookInit = function(req, token, refreshToken, profile, callback) {
 		
 		user.facebook.id = profile.id;
 		user.facebook.token = token;
-		user.facebook.email = profile.emails[0].value;
+		user.facebook.email = profile.emails ? profile.emails[0].value : "N/A";
 		
 		user.save(function(err) {
 			if (err) {
