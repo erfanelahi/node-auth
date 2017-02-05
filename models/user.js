@@ -10,8 +10,8 @@ var User = new Schema({
 	facebook : {
 		id : String,
 		token : String,
-		email : String,
-		displayNmae : String
+		displayName : String,
+		email : String
 	}
 });
 

@@ -84,9 +84,9 @@ var facebookInit = function (req, token, refreshToken, profile, callback) {
 
 		user.facebook.id = profile.id;
 		user.facebook.token = token;
-		user.facebook.email = profile.emails ? profile.emails[0].value : "N/A";
 		user.facebook.displayName = profile.displayName;
-
+		user.facebook.email = profile.emails ? profile.emails[0].value : "N/A";
+		
 		user.save(function (err) {
 			if (err) {
 				throw err;
