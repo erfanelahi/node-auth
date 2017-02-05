@@ -20,7 +20,8 @@
 <h3>Facebook Account</h3>
 <ul>
 	<% if (user.facebook.id) { %>
-		<li>ID: <%= user.facebook.id %></li>	
+		<li>ID: <%= user.facebook.id %></li>
+		<li>Display Name: <%= user.facebook.displayName %></li>	
 		<li>Email: <%= user.facebook.email %></li>
 		<li>Token: <%= user.facebook.token %></li>
 		<li><a href="/disconnect/facebook">Disconnect account</a></li>		
