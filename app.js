@@ -10,7 +10,6 @@ var database = require("./config/database");
 
 var app = express();
 
-
 app.engine("ejs", engine);
 app.set("view engine", "ejs");
 
@@ -41,7 +40,6 @@ app.use(function (req, res, next) {
 });
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get("env") === "development") {

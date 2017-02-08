@@ -22,7 +22,6 @@ var demoAppConfig = {
 	callbackURL: webOrLocalURL + "/demo/callback"
 };
 
-
 var localRegisterInit = function (req, email, password, callback) {
 	User.findOne({ "local.email": email }, function (err, existingUser) {
 		if (err) {
@@ -69,7 +68,6 @@ var localOptions = {
 	passReqToCallback: true
 };
 
-
 var facebookInit = function (req, token, refreshToken, profile, callback) {
 	User.findOne({ "facebook.id": profile.id }, function (err, existingUser) {
 		if (err) {
@@ -115,7 +113,6 @@ passport.deserializeUser(function (id, callback) {
 		callback(err, user);
 	});
 });
-
 
 module.exports = {
 	local: {
